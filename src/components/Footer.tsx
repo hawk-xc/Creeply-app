@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer: React.FC = (): React.JSX.Element => {
   return (
-    <footer className="footer footer-center bg-base-content mt-20 text-primary-content p-10">
+    <footer className="footer footer-center bg-gray-900 mt-20 text-white p-10">
       <aside>
         <Image
           id="applogo"

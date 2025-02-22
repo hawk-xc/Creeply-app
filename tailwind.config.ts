@@ -15,6 +15,7 @@ export default {
       },
       daisyui: {
         themes: ["light", "dark", "cupcake"],
+        defaultTheme: "light",
         foreground: "var(--foreground)",
       },
     },

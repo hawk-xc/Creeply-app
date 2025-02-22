@@ -7,6 +7,7 @@ import { RiHeart2Line } from "@remixicon/react";
 import Image from "next/image";
 import cerpenType from "@/types/cerpenType";
 import Loading from "./loading";
+import Error from "./error";
 
 const fetcher = async (url: string): Promise<cerpenType> => {
   const response = await fetch(url).then((res) => res.json());
@@ -15,13 +16,13 @@ const fetcher = async (url: string): Promise<cerpenType> => {
 };
 
 const StoryDetailPage: React.FC = (): React.JSX.Element => {
-  const baseUrl = "https://creeply.vercel.app/api";
-  // const baseUrl = "http://localhost:3000/api";
+  // const baseUrl = "https://creeply.vercel.app/api";
+  const baseUrl = "http://localhost:3000/api";
   const { slug } = useParams();
   console.log(slug);
   const { data, error } = useSWR(`${baseUrl}/cerpen/story/${slug}`, fetcher);
 
-  if (error) return <span>Error</span>;
+  if (error) return <Error />;
   if (!data) return <Loading />;
 
   return (

@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
-import Drawer from '@/components/Drawer';
+import Drawer from "@/components/Drawer";
+import ThemeToggle from "@/particles/themeToggle";
 
 const Navbar: React.FC = (): React.JSX.Element => {
   return (
@@ -14,7 +14,8 @@ const Navbar: React.FC = (): React.JSX.Element => {
           height={50}
         />
       </div>
-      <div className="flex-none">
+      <div className="flex-none gap-2">
+        <ThemeToggle />
         <Drawer />
       </div>
     </nav>
