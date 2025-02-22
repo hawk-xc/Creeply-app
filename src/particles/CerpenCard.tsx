@@ -4,8 +4,10 @@ import React, { useState, useEffect } from 'react';
 import cerpenType from "@/types/cerpenType";
 import Image from "next/image";
 import { RiUserLine, RiHeart2Line } from "@remixicon/react";
+import { useRouter } from 'next/navigation';
 
 const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
+  const { push } = useRouter();
   const [mobileView, setMobileView] = useState(false);
 
   useEffect(() => {
@@ -29,8 +31,12 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
     return text;
   };
 
+  const handleClick = (url: string): void => {
+    push(url);
+  }
+
   return (
-    <div id={`card-${props.id}`} className="flex flex-row gap-5">
+    <div id={`card-${props.id}`} className="flex flex-row gap-5 cursor-pointer hover:brightness-90" onClick={() => handleClick(`/cerpen/${props.slug}`)}>
       <Image
         src={props.image}
         alt={props.title}
