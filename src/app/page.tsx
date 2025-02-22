@@ -16,7 +16,7 @@ const fetchData = async () => {
 
 const HomePage: React.FC = async (): Promise<React.JSX.Element> => {
   return (
-    <div className="bg-base-100 text-base-content md:px-52 md:pt-5 max-sm:px-5">
+    <div className="default-screen">
       <h1 className="text-2xl font-extrabold mb-5 text-blue-600">Home Page</h1>
       <SearchBar />
       <Suspense fallback={<Loading />}>

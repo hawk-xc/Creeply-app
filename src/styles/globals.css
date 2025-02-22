@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.default-screen {
+  @apply bg-base-100 text-base-content md:px-52 md:pt-5 max-sm:px-5;
+}
