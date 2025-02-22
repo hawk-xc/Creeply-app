@@ -7,7 +7,7 @@ import cerpenType from "@/types/cerpenType";
 import SearchBar from "@/particles/SearchBar";
 
 const fetchData = async () => {
-  const data = await fetch("http://localhost:3000/api/cerpen", {
+  const data = await fetch("https://creeply.vercel.app/api/cerpen", {
     cache: "no-cache",
   }).then((result) => result.json());
 
