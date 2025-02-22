@@ -2,7 +2,7 @@ import cerpenData from "./raw.json";
 import apiResponseType from "@/types/apiResponseType";
 import { NextResponse } from "next/server";
 
-const GET = async () => {
+export const GET = async () => {
   return NextResponse.json<apiResponseType>({
     status: true,
     data: cerpenData,
@@ -10,5 +10,3 @@ const GET = async () => {
     status: 200
   });
 };
-
-export { GET };
