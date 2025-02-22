@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { RiMenuFill } from "@remixicon/react";
+import Drawer from '@/components/Drawer';
 
 const Navbar: React.FC = (): React.JSX.Element => {
   return (
@@ -15,9 +15,7 @@ const Navbar: React.FC = (): React.JSX.Element => {
         />
       </div>
       <div className="flex-none">
-        <button className="btn btn-square btn-ghost">
-          <RiMenuFill size={24} className="text-base-content" />
-        </button>
+        <Drawer />
       </div>
     </nav>
   );
