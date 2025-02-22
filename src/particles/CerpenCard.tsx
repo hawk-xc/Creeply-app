@@ -21,7 +21,7 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
   const minimizeText = (text: string) => {
     if (text?.length > 10) {
       if (mobileView) {
-        return text?.slice(0, 100) + "...";
+        return text?.slice(0, 70) + "...";
       } else {
         return text?.slice(0, 200) + "...";
       }
@@ -43,10 +43,10 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
         <span className="text-sm">
           {minimizeText(props?.synopsys[0])}
         </span>
-        <span className="flex flex-row gap-2 mt-5 text-sm">
+        <span className="flex flex-row text-blue-500 gap-2 mt-5 text-sm">
           <RiUserLine className="w-4 h-4" /> {props.author}
         </span>
-        <span className="flex flex-row gap-2 text-sm">
+        <span className="flex flex-row text-blue-500 gap-2 text-sm">
           <RiHeart2Line className="w-4 h-4" /> {props.likes}
         </span>
       </div>

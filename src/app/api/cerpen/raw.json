@@ -2,6 +2,7 @@
     {
         "id": 1,
         "title": "The Devil All the Time",
+        "slug": "the-devil-all-the-time",
         "image": "https://cdn.gramedia.com/uploads/items/722030150_The_Devil_All_the_Time.jpg",
         "author": "Donald Ray Pollock",
         "likes": 340,
@@ -15,6 +16,7 @@
     {
         "id": 2,
         "title": "Omen #3: Misteri Organisasi Rahasia The Jugdes - Lexie Xu",
+        "slug": "omen-3-misteri-organisasi-rahasia-the-jugdes-lexie-xu",
         "image": "https://cdn.gramedia.com/uploads/items/9789792298222_Omen-3_Misteri-Organisasi-Rahasia-The-Jugdes.jpg",
         "author": "Donald Ray Pollock",
         "likes": 30,
@@ -25,6 +27,7 @@
     {
         "id": 3,
         "title": "Arwah",
+        "slug": "arwah",
         "image": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/9786020451176_Arwah.jpg",
         "author": "Jounatan & Guntur Alam",
         "likes": 399,
@@ -36,6 +39,7 @@
     {
         "id": 4,
         "title": "Journal Of Terror: Kembar",
+        "slug": "journal-of-terror-kembar",
         "image": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/cover_rev_journal_of_teror_kembar.jpg",
         "author": "Sweta Kartika",
         "likes": 440,
@@ -48,6 +52,7 @@
     {
         "id": 5,
         "title": "Hendrick : Konnings",
+        "slug": "hendrick-konnings",
         "image": "https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/9786022202011_hendrick_konnings.jpg",
         "author": "Risa Saraswati",
         "likes": 880,
