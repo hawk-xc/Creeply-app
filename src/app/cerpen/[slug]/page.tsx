@@ -16,8 +16,8 @@ const fetcher = async (url: string): Promise<cerpenType> => {
 };
 
 const StoryDetailPage: React.FC = (): React.JSX.Element => {
-  // const baseUrl = "https://creeply.vercel.app/api";
-  const baseUrl = "http://localhost:3000/api";
+  const baseUrl = "https://creeply.vercel.app/api";
+  // const baseUrl = "http://localhost:3000/api";
   const { slug } = useParams();
   console.log(slug);
   const { data, error } = useSWR(`${baseUrl}/cerpen/story/${slug}`, fetcher);
