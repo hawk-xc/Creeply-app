@@ -23,3 +23,11 @@ body {
 .default-screen {
   @apply bg-base-100 text-base-content md:px-52 md:pt-5 max-sm:px-5;
 }
+
+html[data-theme="light"] #applogo {
+  filter: invert(0);
+}
+
+html[data-theme="dark"] #applogo {
+  filter: invert(1);
+}
