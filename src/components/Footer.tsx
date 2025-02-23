@@ -8,7 +8,7 @@ const Footer: React.FC = (): React.JSX.Element => {
     <footer className="footer footer-center bg-gray-900 mt-20 text-white p-10">
       <aside>
         <Image
-          id="applogo"
+          id="applogo-footer"
           src="/CreeplyFullTf.png"
           alt="logo"
           width={300}

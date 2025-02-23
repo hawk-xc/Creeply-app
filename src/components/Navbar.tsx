@@ -8,7 +8,7 @@ const Navbar: React.FC = (): React.JSX.Element => {
       <div className="flex-1">
         <Image
           id="applogo"
-          src="/Creeply.png"
+          src="/CreeplyTf.png"
           alt="logo"
           width={50}
           height={50}
