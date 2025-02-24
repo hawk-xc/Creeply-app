@@ -4,12 +4,12 @@ import React from "react";
 
 const Error: React.FC = (): React.JSX.Element => {
   return (
-    <div className="grid h-screen place-content-center bg-white px-4">
+    <div className="grid h-screen place-content-center bg-base px-4">
       <div className="text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1024 768"
-          className="mx-auto h-56 w-auto text-black sm:h-64"
+          className="mx-auto h-56 w-auto text-base-content sm:h-64"
         >
           <g fill="none" fillRule="evenodd">
             <g fill="#FF5678">
@@ -25,7 +25,7 @@ const Error: React.FC = (): React.JSX.Element => {
           </g>
         </svg>
 
-        <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="mt-6 text-2xl font-bold tracking-tight text-base-content sm:text-4xl">
           Uh-oh!
         </h1>
 

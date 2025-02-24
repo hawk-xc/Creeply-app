@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import cerpenType from "@/types/cerpenType";
 import Image from "next/image";
 import { RiUserLine, RiHeart2Line } from "@remixicon/react";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
   const { push } = useRouter();
@@ -13,7 +13,7 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
   useEffect(() => {
     const handleResize = () => {
       setMobileView(window.innerWidth < 768);
-    }
+    };
 
     handleResize();
 
@@ -33,10 +33,14 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
 
   const handleClick = (url: string): void => {
     push(url);
-  }
+  };
 
   return (
-    <div id={`card-${props.id}`} className="flex flex-row gap-5 cursor-pointer hover:brightness-90" onClick={() => handleClick(`/cerpen/${props.slug}`)}>
+    <div
+      id={`card-${props.id}`}
+      className="flex flex-row gap-5 cursor-pointer hover:brightness-90"
+      onClick={() => handleClick(`/cerpen/${props.slug}`)}
+    >
       <Image
         src={props.image}
         alt={props.title}
@@ -46,9 +50,7 @@ const CerpenCard: React.FC<cerpenType> = (props): React.JSX.Element => {
       />
       <div>
         <h3 className="font-extrabold">{props.title}</h3>
-        <span className="text-sm">
-          {minimizeText(props?.synopsys[0])}
-        </span>
+        <span className="text-sm">{minimizeText(props?.synopsys[0])}</span>
         <span className="flex flex-row text-blue-500 gap-2 mt-5 text-sm">
           <RiUserLine className="w-4 h-4" /> {props.author}
         </span>

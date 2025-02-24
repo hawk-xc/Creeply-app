@@ -7,7 +7,7 @@ import { RiHeart2Line } from "@remixicon/react";
 import Image from "next/image";
 import cerpenType from "@/types/cerpenType";
 import Loading from "./loading";
-import Error from "./error";
+import Error from "@/components/Error";
 
 const fetcher = async (url: string): Promise<cerpenType> => {
   const response = await fetch(url).then((res) => res.json());
@@ -16,10 +16,9 @@ const fetcher = async (url: string): Promise<cerpenType> => {
 };
 
 const StoryDetailPage: React.FC = (): React.JSX.Element => {
-  const baseUrl = "https://creeply.vercel.app/api";
-  // const baseUrl = "http://localhost:3000/api";
+  // const baseUrl = "https://creeply.vercel.app/api";
+  const baseUrl = "http://localhost:3000/api";
   const { slug } = useParams();
-  console.log(slug);
   const { data, error } = useSWR(`${baseUrl}/cerpen/story/${slug}`, fetcher);
 
   if (error) return <Error />;
@@ -29,8 +28,8 @@ const StoryDetailPage: React.FC = (): React.JSX.Element => {
     <div className="default-screen max-sm:pt-2 flex flex-col gap-5">
       <div id="cerpen-header" className="flex flex-row gap-2">
         <Image
-          src={data.image}
-          alt={data.title}
+          src={data?.image}
+          alt={data?.title}
           width={100}
           height={100}
           className="object-cover rounded-md md:w-52 shadow-sm max-sm:w-32"

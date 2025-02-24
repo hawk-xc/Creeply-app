@@ -1,4 +1,7 @@
+"use server";
+
 import React from "react";
+import Link from "next/link";
 import {
   RiMenuFill,
   RiBookShelfLine,
@@ -25,16 +28,16 @@ const Drawer: React.FC = (): React.JSX.Element => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu bg-base-200 text-lg text-base-content min-h-full w-80 p-10 flex flex-col gap-3">
+        <ul className="menu bg-base-100 text-lg text-base-content min-h-full w-80 p-10 flex flex-col gap-3">
           <li>
             <button className="btn rounded-full from-blue-400 to-blue-600 bg-gradient-to-br w-full text-white font-bold text-2xl flex text-center align-middle items-center">
               Sign in
             </button>
           </li>
           <li>
-            <a>
+            <Link href="/cerpen">
               <RiBookShelfLine /> Library
-            </a>
+            </Link>
           </li>
           <li>
             <a>
